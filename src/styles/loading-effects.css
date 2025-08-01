@@ -1,0 +1,251 @@
+/* Loading Effects - Ultra Premium Global Styles */
+
+/* Base loading states - Suave Cinematic */
+[data-load-effect] {
+  opacity: 0;
+  transform: translateY(30px) rotateX(5deg) scale(0.92);
+  filter: blur(6px) brightness(0.8);
+  transition: 
+    opacity 2.5s cubic-bezier(0.19, 1, 0.22, 1), 
+    transform 3s cubic-bezier(0.19, 1, 0.22, 1),
+    filter 2.2s cubic-bezier(0.23, 1, 0.32, 1);
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+[data-load-effect].loaded {
+  opacity: 1;
+  transform: translateY(0) rotateX(0deg) scale(1);
+  filter: blur(0px) brightness(1);
+}
+
+/* Suave sophisticated loading effect variants */
+[data-load-effect="hologram"] {
+  transform: translateY(35px) rotateY(20deg) scale(0.75);
+  filter: blur(8px) hue-rotate(90deg) saturate(0.6);
+  clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  transition: 
+    opacity 3.2s cubic-bezier(0.19, 1, 0.22, 1),
+    transform 3.8s cubic-bezier(0.19, 1, 0.22, 1),
+    filter 2.8s cubic-bezier(0.23, 1, 0.32, 1),
+    clip-path 4.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+[data-load-effect="hologram"].loaded {
+  transform: translateY(0) rotateY(0deg) scale(1);
+  filter: blur(0px) hue-rotate(0deg) saturate(1);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+[data-load-effect="quantum"] {
+  transform: translateY(45px) rotateX(15deg) rotateZ(-8deg) scale(0.7);
+  filter: blur(10px) contrast(0.8) sepia(0.4);
+  clip-path: circle(0% at 50% 50%);
+}
+
+[data-load-effect="quantum"].loaded {
+  transform: translateY(0) rotateX(0deg) rotateZ(0deg) scale(1);
+  filter: blur(0px) contrast(1) sepia(0);
+  clip-path: circle(150% at 50% 50%);
+}
+
+[data-load-effect="matrix"] {
+  transform: translateY(50px) skewY(-8deg) scale(0.6);
+  filter: blur(12px) invert(0.05) contrast(1.2);
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+}
+
+[data-load-effect="matrix"].loaded {
+  transform: translateY(0) skewY(0deg) scale(1);
+  filter: blur(0px) invert(0) contrast(1);
+  clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0 100%);
+}
+
+[data-load-effect="cyber"] {
+  transform: translateY(40px) perspective(500px) rotateY(-30deg) scale(0.75);
+  filter: blur(10px) hue-rotate(60deg) brightness(0.6);
+  clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%);
+  border: 1px solid rgba(0, 255, 255, 0.15);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+}
+
+[data-load-effect="cyber"].loaded {
+  transform: translateY(0) perspective(500px) rotateY(0deg) scale(1);
+  filter: blur(0px) hue-rotate(0deg) brightness(1);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+/* Staggered delays for multiple elements */
+[data-load-delay="1"] { transition-delay: 0.3s; }
+[data-load-delay="2"] { transition-delay: 0.6s; }
+[data-load-delay="3"] { transition-delay: 0.9s; }
+[data-load-delay="4"] { transition-delay: 1.2s; }
+[data-load-delay="5"] { transition-delay: 1.5s; }
+[data-load-delay="6"] { transition-delay: 1.8s; }
+[data-load-delay="7"] { transition-delay: 2.1s; }
+[data-load-delay="8"] { transition-delay: 2.4s; }
+
+/* Advanced loading effects */
+.load-effect-reveal {
+  opacity: 0;
+  clip-path: inset(0 100% 0 0);
+  transition: opacity 1.8s ease-out, clip-path 2.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.load-effect-reveal.loaded {
+  opacity: 1;
+  clip-path: inset(0 0 0 0);
+}
+
+.load-effect-blur {
+  opacity: 0;
+  filter: blur(6px);
+  transform: translateY(15px);
+  transition: all 2.2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.load-effect-blur.loaded {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateY(0);
+}
+
+/* Advanced Particle Effects */
+.load-particles {
+  position: relative;
+  overflow: hidden;
+}
+
+.load-particles::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, rgba(255,255,255,0.15), transparent),
+    radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.1), transparent),
+    radial-gradient(1px 1px at 90px 40px, rgba(255,255,255,0.2), transparent),
+    radial-gradient(1px 1px at 130px 80px, rgba(255,255,255,0.1), transparent);
+  background-repeat: repeat;
+  background-size: 150px 100px;
+  animation: particleFloat 12s linear infinite;
+  opacity: 0;
+  transition: opacity 2.5s ease-out 1.2s;
+}
+
+.load-particles.loaded::before {
+  opacity: 1;
+}
+
+@keyframes particleFloat {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(-100px);
+  }
+}
+
+/* Holographic shimmer effect */
+.load-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.load-shimmer::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.05) 25%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.05) 75%,
+    transparent 100%
+  );
+  animation: holographicSpin 8s linear infinite;
+  opacity: 0;
+  transition: opacity 2.5s ease-out;
+}
+
+.load-shimmer.loaded::before {
+  opacity: 1;
+}
+
+@keyframes holographicSpin {
+  0% {
+    transform: rotate(0deg) scale(0.5);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(360deg) scale(0.5);
+  }
+}
+
+/* Energy wave effect */
+.load-energy {
+  position: relative;
+  overflow: hidden;
+}
+
+.load-energy::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, transparent 70%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  box-shadow: 
+    0 0 10px rgba(255,255,255,0.3),
+    0 0 20px rgba(255,255,255,0.2),
+    0 0 30px rgba(255,255,255,0.1);
+  animation: energyPulse 4.5s ease-out infinite;
+}
+
+@keyframes energyPulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(25);
+    opacity: 0;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  [data-load-effect],
+  .load-effect-reveal,
+  .load-effect-blur {
+    transition: opacity 0.3s ease !important;
+    transform: none !important;
+    clip-path: none !important;
+    filter: none !important;
+  }
+  
+  .load-shimmer::before {
+    animation: none !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  [data-load-effect] {
+    transition-duration: 0.2s !important;
+  }
+}
