@@ -1,10 +1,55 @@
+@import './styles/theme-gael.css';
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+  background-color: var(--gael-black-base);
+  color: var(--gael-cream-base);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Selección de texto con colores GAEL */
+::selection {
+  background-color: var(--gael-red-base);
+  color: var(--gael-black-base);
+}
+
+/* Scrollbar personalizada (para navegadores que la soporten) */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--gael-black-base);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gael-gold-30);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gael-gold-base);
+}
+
+/* Links globales */
+a {
+  color: var(--gael-gold-base);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--gael-gold-light);
+}
+
+/* Focus visible para accesibilidad */
+*:focus-visible {
+  outline: 2px solid var(--gael-gold-base);
+  outline-offset: 2px;
 }
 
 code {

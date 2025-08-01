@@ -109,6 +109,16 @@ const HeroSection = ({ scrollY, setShowBookingModal, heroRef }) => {
               </svg>
             </div>
           )}
+
+          {/* Decorative Elements in Verde Oliva */}
+          {shouldRenderAnimations && (
+            <div className="hero-background__decoratives" aria-hidden="true">
+              <div className="hero-decorative hero-decorative--top-left"></div>
+              <div className="hero-decorative hero-decorative--bottom-right"></div>
+              <div className="hero-decorative-line hero-decorative-line--vertical"></div>
+              <div className="hero-decorative-line hero-decorative-line--horizontal"></div>
+            </div>
+          )}
         </div>
       </div>
       
@@ -122,21 +132,8 @@ const HeroSection = ({ scrollY, setShowBookingModal, heroRef }) => {
         {/* Main Heading with Ultra-Responsive Typography */}
         <h1 className="hero-content__title">
           <div className="hero-content__title-line">
-            <div className="hero-content__title-text hero-content__title-text--primary">
-              {deviceInfo.screenCategory === 'xs-mobile' ? 'ESTILO' : 'DONDE EL'}
-            </div>
-          </div>
-          <div className="hero-content__title-line">
-            <div className="hero-content__title-text hero-content__title-text--primary">
-              {deviceInfo.screenCategory === 'xs-mobile' ? 'PREMIUM' : 'ESTILO'}
-            </div>
-          </div>
-          <div className="hero-content__title-line">
-            <div className="hero-content__title-text hero-content__title-text--secondary">
-              {deviceInfo.screenCategory === 'xs-mobile' 
-                ? 'TRASCIENDE' 
-                : 'TRASCIENDE EL TIEMPO'
-              }
+            <div className="hero-content__title-text hero-content__title-text--brand">
+              HERNAN CARLOS GAEL
             </div>
           </div>
         </h1>

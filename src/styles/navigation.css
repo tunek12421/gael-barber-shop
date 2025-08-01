@@ -1,16 +1,18 @@
 /* Navigation Ultra Responsive Styles */
 
-/* CSS Custom Properties for theme consistency */
+/* CSS Custom Properties for theme consistency - GAEL PALETTE */
 :root {
-  --nav-height-mobile: clamp(3.5rem, 12vh, 4.5rem);
-  --nav-height-tablet: clamp(4rem, 10vh, 5rem);
-  --nav-height-desktop: clamp(4.5rem, 8vh, 6rem);
+  --nav-height-mobile: clamp(4rem, 14vh, 5rem);
+  --nav-height-tablet: clamp(4.5rem, 12vh, 5.5rem);
+  --nav-height-desktop: clamp(5rem, 10vh, 6.5rem);
   --nav-bg-primary: rgba(0, 0, 0, 0);
   --nav-bg-scrolled: rgba(0, 0, 0, 0.95);
   --nav-backdrop-blur: 20px;
   --nav-border-color: rgba(255, 255, 255, 0.1);
-  --nav-text-primary: rgba(255, 255, 255, 0.9);
-  --nav-text-secondary: rgba(255, 255, 255, 0.7);
+  --nav-logo-color: #FFFFFF; /* WHITE for better visibility */
+  --nav-text-primary: #FFFFFF; /* WHITE */
+  --nav-text-secondary: rgba(255, 255, 255, 0.9); /* WHITE with slight opacity */
+  --nav-text-hover: #D2B48C; /* MADERA CLARA */
   --nav-transition-fast: 0.2s ease-out;
   --nav-transition-medium: 0.3s ease-out;
   --nav-transition-slow: 0.5s ease-out;
@@ -69,22 +71,27 @@
   align-items: flex-start;
   gap: clamp(0.125rem, 0.5vw, 0.25rem);
   text-decoration: none;
-  color: var(--nav-text-primary);
+  color: var(--nav-logo-color);
   transition: color var(--nav-transition-fast);
 }
 
 .nav-logo:hover,
 .nav-logo:focus {
-  color: white;
+  color: var(--nav-logo-color);
+  filter: brightness(1.2);
   outline: none;
 }
 
 .nav-logo-text {
-  font-size: clamp(0.75rem, 2.5vw + 0.25rem, 1.25rem);
-  font-weight: 100;
+  font-size: clamp(0.9rem, 3vw + 0.3rem, 1.4rem);
+  font-weight: 300;
   letter-spacing: clamp(0.15em, 0.3em, 0.4em);
   line-height: 0.9;
   text-transform: uppercase;
+  color: #FFFFFF;
+  text-shadow: 
+    0 0 8px rgba(0, 0, 0, 0.8),
+    2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 .nav-logo-divider {
@@ -116,8 +123,8 @@
 
 .nav-menu-link {
   display: block;
-  font-size: clamp(0.7rem, 1.2vw + 0.3rem, 0.9rem);
-  font-weight: 300;
+  font-size: clamp(0.8rem, 1.4vw + 0.35rem, 1rem);
+  font-weight: 500;
   letter-spacing: clamp(0.1em, 0.2em, 0.3em);
   text-transform: uppercase;
   color: var(--nav-text-secondary);
@@ -125,11 +132,14 @@
   padding: clamp(0.5rem, 1vh, 0.75rem) 0;
   transition: color var(--nav-transition-fast);
   border-radius: 2px;
+  text-shadow: 
+    0 0 6px rgba(0, 0, 0, 0.8),
+    2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 .nav-menu-link:hover,
 .nav-menu-link:focus {
-  color: var(--nav-text-primary);
+  color: var(--nav-text-hover);
   outline: none;
 }
 
@@ -158,8 +168,8 @@
 
 .nav-menu-link.active::after {
   width: 100%;
-  background: white;
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+  background: var(--nav-text-primary);
+  box-shadow: 0 0 8px rgba(139, 69, 19, 0.3);
 }
 
 .nav-menu-link.active::before {
@@ -170,7 +180,7 @@
   transform: translateY(-50%);
   width: 4px;
   height: 4px;
-  background: white;
+  background: var(--nav-text-primary);
   border-radius: 50%;
   opacity: 0;
   animation: activeIndicator 0.6s ease-out forwards;
@@ -204,12 +214,12 @@
 .nav-cta {
   position: relative;
   overflow: hidden;
-  padding: clamp(0.5rem, 1.5vh, 0.75rem) clamp(1rem, 3vw, 1.5rem);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: clamp(0.6rem, 1.8vh, 0.85rem) clamp(1.2rem, 3.5vw, 1.7rem);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   background: transparent;
-  color: var(--nav-text-secondary);
-  font-size: clamp(0.7rem, 1vw + 0.3rem, 0.8rem);
-  font-weight: 300;
+  color: #FFFFFF;
+  font-size: clamp(0.8rem, 1.2vw + 0.35rem, 0.9rem);
+  font-weight: 500;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   text-decoration: none;
@@ -218,11 +228,14 @@
     border-color var(--nav-transition-medium),
     color var(--nav-transition-medium);
   border-radius: 2px;
+  text-shadow: 
+    0 0 6px rgba(0, 0, 0, 0.8),
+    2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 .nav-cta:hover,
 .nav-cta:focus {
-  border-color: rgba(255, 255, 255, 0.5);
+  border-color: var(--nav-text-primary);
   color: var(--nav-text-primary);
   outline: none;
 }
@@ -234,7 +247,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: white;
+  background: var(--nav-text-primary);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform var(--nav-transition-medium);
@@ -394,15 +407,15 @@
 .mobile-menu-link:hover,
 .mobile-menu-link:focus,
 .mobile-menu-link:active {
-  color: white;
+  color: var(--nav-text-hover);
   outline: none;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(139, 69, 19, 0.1);
 }
 
 /* Active Section Indicator for Mobile */
 .mobile-menu-link.active {
-  color: white;
-  background: rgba(255, 255, 255, 0.1);
+  color: var(--nav-text-primary);
+  background: rgba(139, 69, 19, 0.15);
   position: relative;
 }
 
@@ -414,7 +427,7 @@
   transform: translateY(-50%);
   width: 3px;
   height: 60%;
-  background: linear-gradient(to bottom, transparent, white, transparent);
+  background: linear-gradient(to bottom, transparent, var(--nav-text-primary), transparent);
   border-radius: 2px;
   animation: activeMobileIndicator 0.5s ease-out forwards;
 }
@@ -456,8 +469,8 @@
 .mobile-menu-cta:hover,
 .mobile-menu-cta:focus,
 .mobile-menu-cta:active {
-  border-color: white;
-  background: white;
+  border-color: var(--nav-text-primary);
+  background: var(--nav-text-primary);
   color: black;
   outline: none;
 }

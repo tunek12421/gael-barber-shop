@@ -1,7 +1,14 @@
 /* Barbers Section Ultra Responsive Styles */
 
-/* CSS Custom Properties for Barbers System */
+/* CSS Custom Properties for Barbers System - GAEL PALETTE */
 :root {
+  /* GAEL Color Palette */
+  --gael-verde-bosque: #2F4F2F;
+  --gael-madera-caoba: #8B4513;
+  --gael-madera-clara: #D2B48C;
+  --gael-verde-oliva: #808000;
+  --gael-negro: #000000;
+  --gael-blanco: #ffffff;
   /* Avatar Scaling System */
   --avatar-size-xs: 80px;  /* Mobile Portrait */
   --avatar-size-sm: 100px; /* Mobile Landscape */
@@ -140,20 +147,22 @@
 .barbers-section__badge-line {
   inline-size: clamp(2rem, 8vw, 3rem);
   block-size: 1px;
-  background: rgb(255 255 255 / 0.3);
+  background: var(--gael-verde-oliva);
+  opacity: 0.6;
 }
 
 .barbers-section__badge-number {
   font-size: clamp(0.75rem, 1.5vw, 0.875rem);
   font-weight: 300;
   letter-spacing: 0.3em;
-  color: rgb(255 255 255 / 0.5);
+  color: var(--gael-madera-caoba);
   white-space: nowrap;
 }
 
 .barbers-section__badge-line--extend {
   flex: 1;
-  background: rgb(255 255 255 / 0.1);
+  background: var(--gael-verde-oliva);
+  opacity: 0.3;
 }
 
 .barbers-section__title {
@@ -162,7 +171,8 @@
   letter-spacing: clamp(0.05em, 0.1em, 0.15em);
   line-height: 0.9;
   text-transform: uppercase;
-  color: white;
+  color: var(--gael-madera-caoba);
+  text-shadow: 0 0 clamp(15px, 3vw, 25px) rgba(139, 69, 19, 0.3);
   margin-block-end: clamp(0.75rem, 2vh, 1rem);
 }
 
@@ -219,7 +229,7 @@
   inline-size: 8px;
   block-size: 8px;
   border-radius: 50%;
-  background: rgb(255 255 255 / 0.3);
+  background: rgba(139, 69, 19, 0.4);
   border: none;
   cursor: pointer;
   transition: background-color var(--barber-transition-fast);
@@ -240,12 +250,13 @@
 }
 
 .barbers-carousel__dot--active {
-  background: rgb(255 255 255 / 0.8);
+  background: var(--gael-madera-caoba);
+  box-shadow: 0 0 8px rgba(139, 69, 19, 0.5);
 }
 
 .barbers-carousel__dot:hover,
 .barbers-carousel__dot:focus-visible {
-  background: rgb(255 255 255 / 0.6);
+  background: var(--gael-verde-oliva);
   outline: none;
 }
 
@@ -254,9 +265,10 @@
   position: relative;
   inline-size: 100%;
   max-inline-size: var(--barber-card-width);
-  background: rgb(0 0 0 / 0.4);
-  border: 1px solid rgb(255 255 255 / 0.1);
-  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.8);
+  border: 2px solid var(--gael-madera-caoba);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 20px rgba(139, 69, 19, 0.2);
   overflow: hidden;
   cursor: pointer;
   transition: 
@@ -368,9 +380,9 @@
 
 .barber-card:hover,
 .barber-card:focus-within {
-  transform: translateY(-1px);
-  border-color: rgb(255 255 255 / 0.3);
-  box-shadow: 0 4px 20px rgb(0 0 0 / 0.2);
+  transform: translateY(-2px);
+  border-color: var(--gael-verde-oliva);
+  box-shadow: 0 8px 30px rgba(128, 128, 0, 0.4), 0 0 25px rgba(139, 69, 19, 0.3);
 }
 
 /* Barber Avatar */
@@ -455,8 +467,15 @@
 }
 
 .barber-card__header {
-  border-block-end: 1px solid rgb(255 255 255 / 0.1);
+  border-block-end: 1px solid var(--gael-madera-caoba);
   padding-block-end: clamp(0.5rem, 1.5vw, 0.75rem);
+  opacity: 0.8;
+  transition: opacity var(--barber-transition-fast);
+}
+
+.barber-card:hover .barber-card__header,
+.barber-card:focus-within .barber-card__header {
+  opacity: 1;
 }
 
 .barber-card__name {
@@ -464,9 +483,17 @@
   font-weight: 300;
   letter-spacing: clamp(0.1em, 0.15em, 0.2em);
   text-transform: uppercase;
-  color: white;
+  color: var(--gael-verde-bosque);
+  text-shadow: 0 0 10px rgba(47, 79, 47, 0.4);
   line-height: 1.1;
   margin-block-end: clamp(0.25rem, 0.5vw, 0.5rem);
+  transition: all var(--barber-transition-fast);
+}
+
+.barber-card:hover .barber-card__name,
+.barber-card:focus-within .barber-card__name {
+  filter: brightness(1.2);
+  text-shadow: 0 0 15px rgba(47, 79, 47, 0.6);
 }
 
 .barber-card__title {
@@ -481,8 +508,15 @@
 .barber-card__specialty {
   font-size: var(--barber-specialty-size);
   font-weight: 300;
-  color: rgb(255 255 255 / 0.7);
+  color: var(--gael-madera-caoba);
+  text-shadow: 0 0 8px rgba(139, 69, 19, 0.3);
   line-height: 1.3;
+  transition: color var(--barber-transition-fast);
+}
+
+.barber-card:hover .barber-card__specialty,
+.barber-card:focus-within .barber-card__specialty {
+  color: var(--gael-madera-clara);
 }
 
 /* Bio Text with Truncation */
@@ -553,12 +587,13 @@
 .barber-card__star {
   inline-size: clamp(8px, 1.5vw, 12px);
   block-size: clamp(16px, 3vw, 20px);
-  background: rgb(255 255 255 / 0.2);
+  background: rgba(139, 69, 19, 0.3);
   transition: background-color var(--barber-transition-fast);
 }
 
 .barber-card__star--filled {
-  background: rgb(255 255 255 / 0.7);
+  background: var(--gael-madera-caoba);
+  box-shadow: 0 0 4px rgba(139, 69, 19, 0.5);
 }
 
 .barber-card__rating-value {
@@ -582,7 +617,14 @@
   gap: clamp(0.5rem, 2vw, 1rem);
   margin-block-start: clamp(0.75rem, 2vw, 1rem);
   padding-block-start: clamp(0.75rem, 2vw, 1rem);
-  border-block-start: 1px solid rgb(255 255 255 / 0.1);
+  border-block-start: 1px solid var(--gael-verde-oliva);
+  opacity: 0.7;
+  transition: opacity var(--barber-transition-fast);
+}
+
+.barber-card:hover .barber-card__social,
+.barber-card:focus-within .barber-card__social {
+  opacity: 1;
 }
 
 .barber-card__social-link {
@@ -591,19 +633,20 @@
   justify-content: center;
   inline-size: var(--touch-target-comfortable);
   block-size: var(--touch-target-comfortable);
-  background: rgb(255 255 255 / 0.05);
-  border: 1px solid rgb(255 255 255 / 0.1);
-  color: rgb(255 255 255 / 0.6);
+  background: rgba(139, 69, 19, 0.1);
+  border: 1px solid var(--gael-madera-caoba);
+  color: var(--gael-madera-caoba);
   text-decoration: none;
   transition: all var(--barber-transition-fast);
 }
 
 .barber-card__social-link:hover,
 .barber-card__social-link:focus-visible {
-  background: rgb(255 255 255 / 0.1);
-  border-color: rgb(255 255 255 / 0.3);
-  color: white;
+  background: var(--gael-verde-oliva);
+  border-color: var(--gael-verde-oliva);
+  color: var(--gael-blanco);
   outline: none;
+  box-shadow: 0 0 10px rgba(128, 128, 0, 0.4);
 }
 
 /* Modal Styles */
@@ -881,7 +924,8 @@
   font-weight: 300;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: white;
+  color: var(--gael-verde-bosque);
+  text-shadow: 0 0 12px rgba(47, 79, 47, 0.4);
   line-height: 1.1;
 }
 
@@ -895,7 +939,8 @@
 
 .modal-barber-profile__specialty {
   font-size: clamp(0.875rem, 2vw, 1rem);
-  color: rgb(255 255 255 / 0.6);
+  color: var(--gael-madera-caoba);
+  text-shadow: 0 0 8px rgba(139, 69, 19, 0.3);
   line-height: 1.4;
 }
 

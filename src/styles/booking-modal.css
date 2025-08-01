@@ -2,23 +2,32 @@
    BOOKING MODAL - ULTRA RESPONSIVE
    ==================================== */
 
-/* CSS Custom Properties */
+/* CSS Custom Properties - GAEL PALETTE */
 :root {
-  /* Booking Modal Theme */
-  --booking-primary: #ffffff;
-  --booking-secondary: rgba(255, 255, 255, 0.8);
-  --booking-accent: rgba(255, 255, 255, 0.6);
-  --booking-muted: rgba(255, 255, 255, 0.4);
-  --booking-border: rgba(255, 255, 255, 0.15);
-  --booking-bg: #000000;
-  --booking-bg-subtle: rgba(255, 255, 255, 0.05);
-  --booking-bg-card: rgba(255, 255, 255, 0.03);
+  /* GAEL Color Palette */
+  --gael-verde-bosque: #2F4F2F;
+  --gael-madera-caoba: #8B4513;
+  --gael-madera-clara: #D2B48C;
+  --gael-verde-oliva: #808000;
+  --gael-negro: #000000;
+  --gael-blanco: #ffffff;
+  --gael-crema: #F5F5DC;
   
-  /* Status Colors */
-  --booking-success: #10b981;
-  --booking-error: #ef4444;
-  --booking-warning: #f59e0b;
-  --booking-info: #3b82f6;
+  /* Booking Modal Theme */
+  --booking-primary: var(--gael-blanco);
+  --booking-secondary: var(--gael-crema);
+  --booking-accent: var(--gael-madera-caoba);
+  --booking-muted: rgba(245, 245, 220, 0.6);
+  --booking-border: var(--gael-madera-caoba);
+  --booking-bg: var(--gael-negro);
+  --booking-bg-subtle: rgba(139, 69, 19, 0.05);
+  --booking-bg-card: rgba(139, 69, 19, 0.03);
+  
+  /* Status Colors - GAEL STYLE */
+  --booking-success: var(--gael-verde-oliva);
+  --booking-error: var(--gael-verde-bosque);
+  --booking-warning: var(--gael-madera-clara);
+  --booking-info: var(--gael-verde-bosque);
   
   /* Responsive Spacing */
   --booking-space-xs: clamp(0.25rem, 1vw, 0.5rem);
@@ -82,7 +91,8 @@
 .booking-modal {
   position: relative;
   background: var(--booking-bg);
-  border: 1px solid var(--booking-border);
+  border: 2px solid var(--booking-border);
+  box-shadow: 0 0 30px rgba(139, 69, 19, 0.3);
   color: var(--booking-primary);
   max-width: 100%;
   max-height: 100%;
@@ -164,6 +174,8 @@
   letter-spacing: 0.1em;
   margin: 0 0 var(--booking-space-sm) 0;
   text-transform: uppercase;
+  color: var(--gael-verde-bosque);
+  text-shadow: 0 0 15px rgba(47, 79, 47, 0.4);
 }
 
 .booking-modal__subtitle {
@@ -216,7 +228,7 @@
 .booking-modal__step-indicator {
   width: 2.5rem;
   height: 2.5rem;
-  border: 2px solid var(--booking-border);
+  border: 2px solid var(--gael-madera-caoba);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -224,20 +236,22 @@
   background: var(--booking-bg);
   transition: all var(--booking-transition-normal);
   position: relative;
+  color: var(--gael-madera-caoba);
 }
 
 .booking-modal__step--active .booking-modal__step-indicator {
-  border-color: var(--booking-info);
-  background: var(--booking-info);
-  color: white;
+  border-color: var(--gael-verde-bosque);
+  background: var(--gael-verde-bosque);
+  color: var(--gael-blanco);
+  box-shadow: 0 0 15px rgba(47, 79, 47, 0.4);
 }
 
 .booking-modal__step--current .booking-modal__step-indicator {
-  border-color: var(--booking-primary);
-  background: var(--booking-primary);
-  color: var(--booking-bg);
+  border-color: var(--gael-verde-bosque);
+  background: var(--gael-verde-bosque);
+  color: var(--gael-blanco);
   transform: scale(1.1);
-  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 0 4px rgba(47, 79, 47, 0.3), 0 0 20px rgba(139, 69, 19, 0.4);
 }
 
 .booking-modal__step-number {
@@ -252,7 +266,7 @@
 
 .booking-modal__step-title {
   font-size: var(--booking-text-xs);
-  color: var(--booking-accent);
+  color: var(--gael-madera-caoba);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   text-align: center;
@@ -260,7 +274,8 @@
 }
 
 .booking-modal__step--active .booking-modal__step-title {
-  color: var(--booking-secondary);
+  color: var(--gael-verde-bosque);
+  text-shadow: 0 0 8px rgba(47, 79, 47, 0.3);
 }
 
 /* ====================================
@@ -293,7 +308,8 @@
   display: flex;
   align-items: center;
   gap: var(--booking-space-sm);
-  color: var(--booking-secondary);
+  color: var(--gael-verde-bosque);
+  text-shadow: 0 0 10px rgba(47, 79, 47, 0.3);
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -336,8 +352,9 @@
 }
 
 .service-card--selected {
-  border-color: var(--booking-success);
-  background: rgba(16, 185, 129, 0.1);
+  border-color: var(--gael-verde-oliva);
+  background: rgba(128, 128, 0, 0.1);
+  box-shadow: 0 0 15px rgba(128, 128, 0, 0.3);
 }
 
 .service-card__header {
@@ -381,12 +398,13 @@
   right: var(--booking-space-md);
   width: 1.5rem;
   height: 1.5rem;
-  background: var(--booking-success);
+  background: var(--gael-verde-oliva);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   animation: bounceIn var(--booking-transition-normal) var(--booking-spring);
+  box-shadow: 0 0 10px rgba(128, 128, 0, 0.4);
 }
 
 .service-card__check-icon {
@@ -426,8 +444,9 @@
 }
 
 .barber-card--selected {
-  border-color: var(--booking-success);
-  background: rgba(16, 185, 129, 0.1);
+  border-color: var(--gael-verde-oliva);
+  background: rgba(128, 128, 0, 0.1);
+  box-shadow: 0 0 15px rgba(128, 128, 0, 0.3);
 }
 
 .barber-card__name {
@@ -466,12 +485,13 @@
   right: var(--booking-space-md);
   width: 1.5rem;
   height: 1.5rem;
-  background: var(--booking-success);
+  background: var(--gael-verde-oliva);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   animation: bounceIn var(--booking-transition-normal) var(--booking-spring);
+  box-shadow: 0 0 10px rgba(128, 128, 0, 0.4);
 }
 
 .barber-card__check-icon {
@@ -594,7 +614,8 @@
 
 .touch-calendar__day:hover:not(:disabled) {
   background: var(--booking-bg-subtle);
-  border-color: var(--booking-accent);
+  border-color: var(--gael-verde-oliva);
+  color: var(--gael-madera-caoba);
 }
 
 .touch-calendar__day--current {
@@ -607,14 +628,15 @@
 }
 
 .touch-calendar__day--today {
-  border-color: var(--booking-info);
-  background: rgba(59, 130, 246, 0.1);
+  border-color: var(--gael-madera-caoba);
+  background: rgba(139, 69, 19, 0.1);
 }
 
 .touch-calendar__day--selected {
-  background: var(--booking-success);
-  border-color: var(--booking-success);
-  color: white;
+  background: var(--gael-verde-oliva);
+  border-color: var(--gael-verde-oliva);
+  color: var(--gael-blanco);
+  box-shadow: 0 0 10px rgba(128, 128, 0, 0.4);
 }
 
 .touch-calendar__day--disabled {
@@ -634,7 +656,7 @@
   transform: translateX(-50%);
   width: 4px;
   height: 4px;
-  background: var(--booking-info);
+  background: var(--gael-verde-oliva);
   border-radius: 50%;
 }
 
@@ -792,9 +814,10 @@
 }
 
 .time-slot-grid__slot--selected {
-  border-color: var(--booking-success);
-  background: rgba(16, 185, 129, 0.1);
-  color: var(--booking-success);
+  border-color: var(--gael-verde-oliva);
+  background: rgba(128, 128, 0, 0.1);
+  color: var(--gael-verde-oliva);
+  box-shadow: 0 0 10px rgba(128, 128, 0, 0.3);
 }
 
 .time-slot-grid__slot--popular {
@@ -942,8 +965,8 @@
 
 .booking-field__input,
 .booking-field__textarea {
-  background: var(--booking-bg-subtle);
-  border: 2px solid var(--booking-border);
+  background: var(--gael-negro);
+  border: 2px solid var(--gael-madera-caoba);
   border-radius: 0.5rem;
   color: var(--booking-primary);
   font-size: var(--booking-text-base);
@@ -956,9 +979,9 @@
 .booking-field__input:focus,
 .booking-field__textarea:focus {
   outline: none;
-  border-color: var(--booking-info);
+  border-color: var(--gael-verde-bosque);
   background: var(--booking-bg-card);
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  box-shadow: 0 0 0 3px rgba(47, 79, 47, 0.2), 0 0 15px rgba(139, 69, 19, 0.3);
 }
 
 .booking-field__input::placeholder,
@@ -1216,15 +1239,18 @@
 }
 
 .booking-modal__btn--primary {
-  background: var(--booking-info);
-  color: white;
-  border-color: var(--booking-info);
+  background: var(--gael-verde-bosque);
+  color: var(--gael-blanco);
+  border-color: var(--gael-verde-bosque);
+  box-shadow: 0 0 15px rgba(47, 79, 47, 0.3);
 }
 
 .booking-modal__btn--primary:hover:not(:disabled) {
-  background: #2563eb;
-  border-color: #2563eb;
+  background: var(--gael-verde-bosque);
+  border-color: var(--gael-madera-caoba);
   transform: translateY(-1px);
+  filter: brightness(1.1);
+  box-shadow: 0 0 25px rgba(47, 79, 47, 0.5), 0 0 15px rgba(139, 69, 19, 0.3);
 }
 
 .booking-modal__btn--secondary {

@@ -1,0 +1,254 @@
+/**
+ * GAEL BARBER SHOP - THEME VARIABLES
+ * Paleta de colores personalizada para la marca GAEL
+ */
+
+:root {
+  /* ==========================================================================
+     COLORES PRINCIPALES - GAEL BARBER SHOP
+     ========================================================================== */
+  
+  /* Verde Bosque GAEL - Color principal de marca */
+  --gael-green-forest-base: #2F4F2F;
+  --gael-green-forest-light: #3F5F3F;
+  --gael-green-forest-dark: #1F3F1F;
+  --gael-green-forest-darker: #0F2F0F;
+  
+  /* Verde Bosque GAEL con opacidades */
+  --gael-green-forest-90: rgba(47, 79, 47, 0.9);
+  --gael-green-forest-80: rgba(47, 79, 47, 0.8);
+  --gael-green-forest-70: rgba(47, 79, 47, 0.7);
+  --gael-green-forest-60: rgba(47, 79, 47, 0.6);
+  --gael-green-forest-50: rgba(47, 79, 47, 0.5);
+  --gael-green-forest-40: rgba(47, 79, 47, 0.4);
+  --gael-green-forest-30: rgba(47, 79, 47, 0.3);
+  --gael-green-forest-20: rgba(47, 79, 47, 0.2);
+  --gael-green-forest-10: rgba(47, 79, 47, 0.1);
+  --gael-green-forest-05: rgba(47, 79, 47, 0.05);
+
+  /* Negro - Elegancia y sofisticación */
+  --gael-black-base: #000000;
+  --gael-black-light: #1a1a1a;
+  --gael-black-dark: #000000;
+  --gael-black-soft: #0d0d0d;
+  
+  /* Negro con opacidades */
+  --gael-black-90: rgba(0, 0, 0, 0.9);
+  --gael-black-80: rgba(0, 0, 0, 0.8);
+  --gael-black-70: rgba(0, 0, 0, 0.7);
+  --gael-black-60: rgba(0, 0, 0, 0.6);
+  --gael-black-50: rgba(0, 0, 0, 0.5);
+  --gael-black-40: rgba(0, 0, 0, 0.4);
+  --gael-black-30: rgba(0, 0, 0, 0.3);
+  --gael-black-20: rgba(0, 0, 0, 0.2);
+  --gael-black-10: rgba(0, 0, 0, 0.1);
+  --gael-black-05: rgba(0, 0, 0, 0.05);
+
+  /* Madera Caoba - Detalles premium y lujo */
+  --gael-wood-mahogany-base: #8B4513;
+  --gael-wood-mahogany-light: #A0522D;
+  --gael-wood-mahogany-dark: #6B2D0F;
+  --gael-wood-mahogany-darker: #4B1D0B;
+  
+  /* Madera Caoba con opacidades */
+  --gael-wood-mahogany-90: rgba(139, 69, 19, 0.9);
+  --gael-wood-mahogany-80: rgba(139, 69, 19, 0.8);
+  --gael-wood-mahogany-70: rgba(139, 69, 19, 0.7);
+  --gael-wood-mahogany-60: rgba(139, 69, 19, 0.6);
+  --gael-wood-mahogany-50: rgba(139, 69, 19, 0.5);
+  --gael-wood-mahogany-40: rgba(139, 69, 19, 0.4);
+  --gael-wood-mahogany-30: rgba(139, 69, 19, 0.3);
+  --gael-wood-mahogany-20: rgba(139, 69, 19, 0.2);
+  --gael-wood-mahogany-10: rgba(139, 69, 19, 0.1);
+  --gael-wood-mahogany-05: rgba(139, 69, 19, 0.05);
+
+  /* ==========================================================================
+     COLORES SECUNDARIOS - GAEL BARBER SHOP
+     ========================================================================== */
+
+  /* Verde Oliva - Elemento diferenciador único */
+  --gael-olive-base: #3C4A3D;
+  --gael-olive-light: #5A6B5B;
+  --gael-olive-dark: #2D3A2E;
+  --gael-olive-darker: #1F281F;
+  
+  /* Verde Oliva con opacidades */
+  --gael-olive-90: rgba(60, 74, 61, 0.9);
+  --gael-olive-80: rgba(60, 74, 61, 0.8);
+  --gael-olive-70: rgba(60, 74, 61, 0.7);
+  --gael-olive-60: rgba(60, 74, 61, 0.6);
+  --gael-olive-50: rgba(60, 74, 61, 0.5);
+  --gael-olive-40: rgba(60, 74, 61, 0.4);
+  --gael-olive-30: rgba(60, 74, 61, 0.3);
+  --gael-olive-20: rgba(60, 74, 61, 0.2);
+  --gael-olive-10: rgba(60, 74, 61, 0.1);
+  --gael-olive-05: rgba(60, 74, 61, 0.05);
+
+  /* Madera Clara - Calidez y elegancia */
+  --gael-wood-light-base: #D2B48C;
+  --gael-wood-light-light: #E6D0A3;
+  --gael-wood-light-dark: #B8966F;
+  --gael-wood-light-darker: #9E7A52;
+  
+  /* Madera Clara con opacidades */
+  --gael-wood-light-90: rgba(210, 180, 140, 0.9);
+  --gael-wood-light-80: rgba(210, 180, 140, 0.8);
+  --gael-wood-light-70: rgba(210, 180, 140, 0.7);
+  --gael-wood-light-60: rgba(210, 180, 140, 0.6);
+  --gael-wood-light-50: rgba(210, 180, 140, 0.5);
+  --gael-wood-light-40: rgba(210, 180, 140, 0.4);
+  --gael-wood-light-30: rgba(210, 180, 140, 0.3);
+  --gael-wood-light-20: rgba(210, 180, 140, 0.2);
+  --gael-wood-light-10: rgba(210, 180, 140, 0.1);
+  --gael-wood-light-05: rgba(210, 180, 140, 0.05);
+
+  /* Crema - Fondos suaves y elegantes */
+  --gael-cream-base: #F5E6D3;
+  --gael-cream-light: #F9F0E3;
+  --gael-cream-dark: #E8D4BB;
+  --gael-cream-darker: #D4C0A1;
+  
+  /* Crema con opacidades */
+  --gael-cream-90: rgba(245, 230, 211, 0.9);
+  --gael-cream-80: rgba(245, 230, 211, 0.8);
+  --gael-cream-70: rgba(245, 230, 211, 0.7);
+  --gael-cream-60: rgba(245, 230, 211, 0.6);
+  --gael-cream-50: rgba(245, 230, 211, 0.5);
+  --gael-cream-40: rgba(245, 230, 211, 0.4);
+  --gael-cream-30: rgba(245, 230, 211, 0.3);
+  --gael-cream-20: rgba(245, 230, 211, 0.2);
+  --gael-cream-10: rgba(245, 230, 211, 0.1);
+  --gael-cream-05: rgba(245, 230, 211, 0.05);
+
+  /* ==========================================================================
+     VARIABLES SEMÁNTICAS - GAEL BARBER SHOP
+     ========================================================================== */
+
+  /* Colores de marca principales */
+  --gael-primary: var(--gael-green-forest-base);
+  --gael-primary-hover: var(--gael-green-forest-dark);
+  --gael-primary-active: var(--gael-green-forest-darker);
+  --gael-primary-soft: var(--gael-green-forest-20);
+
+  /* Colores de acento */
+  --gael-accent: var(--gael-wood-mahogany-base);
+  --gael-accent-hover: var(--gael-wood-mahogany-dark);
+  --gael-accent-soft: var(--gael-wood-mahogany-20);
+
+  /* Colores de fondo */
+  --gael-bg-primary: var(--gael-black-base);
+  --gael-bg-secondary: var(--gael-cream-base);
+  --gael-bg-soft: var(--gael-cream-light);
+  --gael-bg-overlay: var(--gael-black-80);
+
+  /* Colores de texto */
+  --gael-text-primary: var(--gael-black-base);
+  --gael-text-secondary: var(--gael-olive-base);
+  --gael-text-light: var(--gael-cream-base);
+  --gael-text-accent: var(--gael-green-forest-base);
+
+  /* Colores de borde */
+  --gael-border-primary: var(--gael-green-forest-base);
+  --gael-border-secondary: var(--gael-wood-mahogany-base);
+  --gael-border-soft: var(--gael-cream-dark);
+  --gael-border-subtle: var(--gael-black-10);
+
+  /* ==========================================================================
+     GRADIENTES PERSONALIZADOS - GAEL BARBER SHOP
+     ========================================================================== */
+
+  /* Gradiente principal GAEL */
+  --gael-gradient-primary: linear-gradient(135deg, var(--gael-green-forest-base) 0%, var(--gael-green-forest-dark) 100%);
+  --gael-gradient-primary-soft: linear-gradient(135deg, var(--gael-green-forest-20) 0%, var(--gael-green-forest-10) 100%);
+
+  /* Gradiente de lujo */
+  --gael-gradient-luxury: linear-gradient(135deg, var(--gael-wood-mahogany-base) 0%, var(--gael-wood-mahogany-dark) 50%, var(--gael-wood-light-base) 100%);
+
+  /* Gradiente elegante */
+  --gael-gradient-elegant: linear-gradient(135deg, var(--gael-black-base) 0%, var(--gael-olive-dark) 100%);
+
+  /* Gradiente suave */
+  --gael-gradient-soft: linear-gradient(135deg, var(--gael-cream-base) 0%, var(--gael-cream-light) 100%);
+
+  /* ==========================================================================
+     SOMBRAS PERSONALIZADAS - GAEL BARBER SHOP
+     ========================================================================== */
+
+  /* Sombras con color de marca */
+  --gael-shadow-green: 0 4px 20px var(--gael-green-forest-30);
+  --gael-shadow-green-lg: 0 8px 40px var(--gael-green-forest-40);
+  --gael-shadow-wood: 0 4px 20px var(--gael-wood-mahogany-30);
+  --gael-shadow-black: 0 4px 20px var(--gael-black-50);
+  --gael-shadow-soft: 0 2px 10px var(--gael-black-10);
+
+  /* ==========================================================================
+     VARIABLES DE COMPONENTES ESPECÍFICOS
+     ========================================================================== */
+
+  /* Variables para botones */
+  --gael-btn-primary-bg: var(--gael-green-forest-base);
+  --gael-btn-primary-color: var(--gael-cream-base);
+  --gael-btn-primary-hover: var(--gael-green-forest-dark);
+  --gael-btn-primary-shadow: var(--gael-shadow-green);
+
+  --gael-btn-accent-bg: var(--gael-wood-mahogany-base);
+  --gael-btn-accent-color: var(--gael-black-base);
+  --gael-btn-accent-hover: var(--gael-wood-mahogany-dark);
+  --gael-btn-accent-shadow: var(--gael-shadow-wood);
+
+  /* Variables para cards */
+  --gael-card-bg: var(--gael-cream-base);
+  --gael-card-border: var(--gael-cream-dark);
+  --gael-card-shadow: var(--gael-shadow-soft);
+  --gael-card-hover-shadow: var(--gael-shadow-black);
+
+  /* Variables para navegación */
+  --gael-nav-bg: var(--gael-black-base);
+  --gael-nav-text: var(--gael-cream-base);
+  --gael-nav-accent: var(--gael-green-forest-base);
+  --gael-nav-hover: var(--gael-green-forest-20);
+}
+
+/* ==========================================================================
+   MODO OSCURO - AJUSTES AUTOMÁTICOS
+   ========================================================================== */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Ajustes automáticos para modo oscuro */
+    --gael-bg-secondary: var(--gael-black-light);
+    --gael-bg-soft: var(--gael-olive-darker);
+    --gael-text-primary: var(--gael-cream-base);
+    --gael-card-bg: var(--gael-black-light);
+  }
+}
+
+/* ==========================================================================
+   UTILIDADES DE DEBUGGING
+   ========================================================================== */
+
+.gael-debug-colors {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: var(--gael-cream-base);
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: var(--gael-shadow-black);
+  font-size: 12px;
+  z-index: 9999;
+  display: none; /* Mostrar solo en desarrollo */
+}
+
+.gael-debug-colors.show {
+  display: block;
+}
+
+.gael-color-swatch {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 2px;
+  border-radius: 3px;
+  border: 1px solid var(--gael-black-20);
+}
